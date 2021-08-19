@@ -71,6 +71,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 nav > a .logo {
   width: 150px;
@@ -219,6 +220,47 @@ nav i:hover {
 }
 @media (max-width: 850px) {
   .landing .content .text h1 {
+    font-size: 20px;
   }
+  .landing .content .text button {
+    width: 150px;
+    height: 45px;
+    font-size: 11px;
+  }
+  .landing .content .text p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 649px) {
+  .landing .content .text button {
+    margin-bottom: 20px;
+    margin-right: 0px !important;
+  }
+}
+@media (max-width: 500px) {
+  .landing .content .text h1 {
+    font-size: 13px;
+  }
+  .landing .content .text p {
+    font-size: 9px;
+  }
+  .landing .content .text button {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    width: 110px;
+    height: 35px;
+    font-size: 10px;
+  }
+}
+.landing .content::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 700;
+  left: 50%;
+  color: var(--main-color);
 }
 /* End Landing */
