@@ -189,12 +189,20 @@ nav i:hover {
   left: 50%;
   top: 50%;
   color: white;
+  margin: 20px auto;
+  width: 100%;
   text-align: center;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+.landing .content .text h1 {
+  font-size: 50px;
+}
+.landing .content .text p {
+  font-size: 15px;
 }
 .landing .content .text button {
   color: white;
@@ -203,11 +211,11 @@ nav i:hover {
   font-size: 15px;
   letter-spacing: 3px;
   cursor: pointer;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .landing .content .text button:first-of-type {
   background: transparent;
@@ -218,40 +226,6 @@ nav i:hover {
   background-color: var(--main-color);
   border: 1px solid var(--main-color);
 }
-@media (max-width: 850px) {
-  .landing .content .text h1 {
-    font-size: 20px;
-  }
-  .landing .content .text button {
-    width: 150px;
-    height: 45px;
-    font-size: 11px;
-  }
-  .landing .content .text p {
-    font-size: 12px;
-  }
-}
-@media (max-width: 649px) {
-  .landing .content .text button {
-    margin-bottom: 20px;
-    margin-right: 0px !important;
-  }
-}
-@media (max-width: 500px) {
-  .landing .content .text h1 {
-    font-size: 13px;
-  }
-  .landing .content .text p {
-    font-size: 9px;
-  }
-  .landing .content .text button {
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    width: 110px;
-    height: 35px;
-    font-size: 10px;
-  }
-}
 .landing .content::after {
   content: "\f0d7";
   font-family: "Font Awesome 5 Pro";
@@ -259,8 +233,174 @@ nav i:hover {
   font-size: 30px;
   position: absolute;
   bottom: 10px;
-  z-index: 700;
+  transform: translateX(-50%);
   left: 50%;
   color: var(--main-color);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+@media (max-width: 850px) {
+  .landing .content .text h1 {
+    font-size: 30px;
+  }
+  .landing .content .text button {
+    width: 150px;
+    height: 45px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 500px) {
+  .landing .content .text h1 {
+    font-size: 19px;
+  }
+  .landing .content::after {
+    font-size: 25px;
+  }
+  .landing .content .text p {
+    font-size: 11px;
+  }
+  .landing .content .text button {
+    letter-spacing: 1px;
+    width: 100px;
+    height: 32px;
+    font-size: 9px;
+  }
+  .landing .content .text button:first-of-type {
+    margin-right: 10px;
+  }
 }
 /* End Landing */
+/* Start History */
+.main-heading {
+  text-align: center;
+  margin: 100px auto;
+  position: relative;
+}
+.main-heading h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #231f20;
+  margin-bottom: 80px;
+  position: relative;
+}
+.main-heading h2::before {
+  content: "";
+  height: 2px;
+  background-color: var(--main-color);
+  width: 100px;
+  position: absolute;
+  top: 69px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.main-heading h2::after {
+  content: "";
+  border: 2px solid var(--main-color);
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) rotate(45deg);
+}
+.main-heading p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #637988;
+  font-family: "Crimson Text";
+}
+/* End History */
+/* Start Portfolio */
+.portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.portfolio > div {
+  width: calc(100% / 4);
+  height: 550px;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  background-size: cover;
+}
+.portfolio .one {
+  background-image: url(../images/appartment-1.jpg);
+}
+.portfolio .three {
+  background-image: url(../images/appartment-2.jfif);
+}
+.portfolio .two {
+  background-image: url(../images/appartment-3.jpg);
+}
+.portfolio .four {
+  background-image: url(../images/appartment-4.jpg);
+}
+.portfolio > div .hover {
+  position: absolute;
+  width: 100%;
+  bottom: -100%;
+  background-color: var(--main-color);
+  opacity: 0.9;
+}
+.portfolio > div:hover .hover {
+  bottom: 0;
+}
+.portfolio,
+.portfolio > div,
+.portfolio > div .hover {
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.portfolio > div .hover h3 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin: 50px auto;
+}
+.portfolio > div .hover p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Crimson Text";
+  max-width: 400px;
+  margin: 50px auto;
+}
+.portfolio > div .hover i {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.portfolio > div .hover i:first-of-type {
+  margin-right: 30px;
+}
+@media (max-width: 985px) {
+  .portfolio > div {
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 520px) {
+  .portfolio > div {
+    width: calc(100%);
+  }
+}
+/* End Portfolio */
